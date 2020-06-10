@@ -7,10 +7,12 @@
  */
 public class RentalDVD
 {
-    /**calculate 나이와 구작여부에 맞는 요금을 return 해준다.
+    /**
+     * 나이와 구작여부에 맞는 할인율을 반환하는 메소드
+     * 
      * @param age 나이 
      * @param oldVideo 구작 여부
-     * @return 나이와 구작 여부에 맞는 요금을 return 해준다.  
+     * @return discountRate 할인율  
      */
     public double calculate(int age, boolean oldVideo){
         double discountRate = 0;
