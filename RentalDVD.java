@@ -10,19 +10,30 @@ public class RentalDVD
     /**
      * 나이와 구작여부에 맞는 할인율을 반환하는 메소드
      * 
-     * @param age 나이 
-     * @param oldVideo 구작 여부
+     * @param age 사용자가 입력한 나이 
+     * @param oldVideo 구작 여부 / true: 구작. false: 신작
      * @return discountRate 할인율  
      */
     public double calculate(int age, boolean oldVideo){
         double discountRate = 0;
-        if (age <= 18)
-        {
-        discountRate = 0.1;
+        if (age <= 18 && oldVideo == true){
+            discountRate = 0.5;
         }
-        else if(age >= 65)
-        {
-        discountRate = 0.2;
+        else if(age >= 65 && oldVideo == true){
+            discountRate = 0.5;
+        }
+        else{
+            if (age <= 18)
+            {
+                discountRate = 0.1;
+            }
+            else if(age >= 65)
+            {
+                discountRate = 0.2;
+            }
+            else if(oldVideo == true){
+                discountRate = 0.5;
+            }
         }
         return discountRate;
     }
