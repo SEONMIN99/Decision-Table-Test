@@ -20,6 +20,10 @@ public class RentalDVD
         {
         discountRate = 0.1;
         }
+        else if(age >= 65)
+        {
+        discountRate = 0.2;
+        }
         return discountRate;
     }
 }
